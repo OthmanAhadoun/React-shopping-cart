@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;800&family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Outfit';   
+}
+#root{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 2% 10% ;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    font-size: 22px;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+}
+header h1{
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    animation: animated 5s  linear infinite ;
+}
+header i{
+    cursor: pointer;
+}
+header h1:hover{
+    animation-play-state: paused;
+}
+@keyframes animated{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+header div{
+    width: 30%;
+    display: flex;
+}
+
+.content{
+    width: 100%;
+    min-height:  100vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    padding-top: 90px;
+}
+.card{
+    width: 390px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px;
+    border-radius: 3px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    text-align: justify;
+    height: fit-content;
+}
+.card img{
+    width: 100%;
+    height: 370px;
+}
+.card button , p  ,h1,small   {
+    margin: 7px;
+}
+.card h1,p{
+    text-align: center;
+    text-transform: capitalize;
+}
+.card  .addtocart{
+    height: 50px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 22px; 
+    transition: 0.4s ease;
+    background-color:#000 ;
+    color:#fff ;
+    cursor: pointer;
+    transition: .4 ease;
+}
+.addtocart:hover{
+    letter-spacing: 1px;
+}
+small{
+    font-size: 24px;
+    font-weight: 700;
+    align-self: flex-end;
+    color: rgb(157, 157, 157);
+}
+.side{
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    background-color: #000000;
+    right: 0;
+    z-index: 10;
+    padding: 50px 1% 10px 1%;
+    overflow-y: auto;
+}
+.side .fa-xmark{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.side .shoppingrow{
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    color: #fff;
+    display: flex;    
+    position: relative;
+    margin-bottom: 10px;
+}
+.shoppingrow .textdisc{
+    width: 280px;
+    height: 100%;
+    padding: 7px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    
+}
+@media screen and (max-width:600px){
+    .side{
+        width: 100%;
+        height: 100%;
+    }
+    .shoppingrow .textdisc {
+        width: 100%;
+        
+    }  
+}
+.shoppingrow img{
+    height: 100%;
+    width: 120px;
+}
+.textdisc p{
+    text-align: justify;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.textdisc h3{
+    color: rgb(157, 157, 157);;
+}
+.textdisc h1{
+    font-size: 19px;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.shoppingrow .textdisc .del{
+    position: absolute;
+    bottom:  7px;
+    right: 7px;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+}
+.hope{
+    position: relative;
+}
+.hope span{
+    position: absolute;
+    font-size: 15px;
+    width: 17px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    top: -5px;
+    right:  -5px;
+    z-index: 1;
+    background-color: #000;
+    color: white;
+    padding: 0 3px;
+    border-radius: 50%;
+}
+.pay{
+    width:130px;
+    height: auto;
+    padding: 5px 5px;
+    background-color: #fff;
+    color: black;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.clear{
+    width:130px;
+    height: auto;
+    padding: 5px 5px;
+    background-color: #fff;
+    color: black;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+.pay:hover,.clear:hover{
+    letter-spacing: 1px;
+}
+#root {
+    overflow-y: scroll; 
+}
+#root::-webkit-scrollbar {
+        display: none;
+}
